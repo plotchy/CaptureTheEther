@@ -4,8 +4,3 @@ __pycache__
 .hypothesis/
 build/
 reports/
-.enormousAlpha
-salt.csv
-key.csv
-encrypted_file.csv
-/scripts/enc.py

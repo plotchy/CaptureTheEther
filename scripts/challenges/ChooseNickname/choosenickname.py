@@ -29,8 +29,8 @@ def main():
     myHexName = Web3.toHex(text='plotchy')[2:]
     myHexName = padHexTo32Bytes(myHexName, "lower")
     print(myHexName)
-    # name_tx = nicknameContract.setNickname(myHexName, {"from": account})
-    # name_tx.wait(1)
+    name_tx = nicknameContract.setNickname(myHexName, {"from": account})
+    name_tx.wait(1)
     isComplete = checkerContract.isComplete()
     print(isComplete)
     myName = nicknameContract.nicknameOf("0x2A1e0000010D393CF93F89000000617A00d50000")
