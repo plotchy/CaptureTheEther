@@ -4,12 +4,11 @@ PROJECT_SCRIPTS_PATH = dotenv_values(".env")["CTF_PROJECT_PATH"] + "/scripts/"
 PROJECT_BUILD_PATH = dotenv_values(".env")["CTF_PROJECT_PATH"] + "/build/"
 sys.path.insert(1, PROJECT_SCRIPTS_PATH)
 from helpful_scripts import get_account, padHexTo32Bytes
-from brownie import network, config, Contract
-import time
-from web3 import Web3, HTTPProvider
+from brownie import Contract
+from web3 import Web3
 import json
-
 PUBLIC_KEY = dotenv_values(".env")["PUBLIC_KEY"]
+
 
 def main():
     with open(PROJECT_BUILD_PATH + "contracts/CaptureTheEther.json") as f:
