@@ -9,6 +9,7 @@ import time
 from web3 import Web3, HTTPProvider
 import json
 
+PUBLIC_KEY = dotenv_values(".env")["PUBLIC_KEY"]
 
 def main():
     with open(PROJECT_BUILD_PATH + "contracts/CaptureTheEther.json") as f:
@@ -33,7 +34,7 @@ def main():
     name_tx.wait(1)
     isComplete = checkerContract.isComplete()
     print(isComplete)
-    myName = nicknameContract.nicknameOf("0x2A1e0000010D393CF93F89000000617A00d50000")
+    myName = nicknameContract.nicknameOf(PUBLIC_KEY)
     print(myName)
 
 
